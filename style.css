@@ -1,0 +1,58 @@
+/* Hero Section Background */
+
+.hero-section {
+    position: relative; /* Ensures content and overlay are positioned correctly */
+    background: url('Hero-Bg.jpg') no-repeat center center/cover; /* Adjust path to your image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+
+
+/* Black Overlay with 50% opacity */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black opacity */
+    z-index: 1; /* Sits on top of the background, but behind the content */
+}
+
+/* Centered content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    color: white;
+    text-align: center;
+}
+
+/* Optional styling for hero heading and paragraph */
+.hero-content h1 {
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.hero-content a {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: white;
+    color: #1a73e8; /* Button text color */
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: #f1f1f1;
+}
